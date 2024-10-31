@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Modern Chat</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="bg-gradient-1"></div>
+        <div class="bg-gradient-2"></div>
+        <div class="bg-gradient-3"></div>
+    </div>
+    
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="workspace-header">
+                <div class="workspace-title">
+                    <div class="workspace-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <span class="workspace-name">DesignVerse</span>
+                </div>
+            </div>
+            
+            <div class="channels-section">
+                <div class="section-header">
+                    <span class="section-title">Channels</span>
+                    <button class="add-channel" id="addChannelBtn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                
+                <ul class="channel-list" id="channelList">
+                    <!-- Channels will be dynamically added here -->
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="chat-header">
+                <div class="channel-info">
+                    <div class="channel-detail">
+                        <span class="current-channel" id="currentChannel">#general</span>
+                        <span class="channel-meta" id="channelMeta">Loading...</span>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-user-group"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="messages-container" id="messagesContainer">
+                <!-- Messages will be dynamically added here -->
+            </div>
+
+            <div class="input-container">
+                <div class="message-input-wrapper">
+                    <button class="input-button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <input type="text" class="message-input" id="messageInput" placeholder="Message #general">
+                    <div class="input-actions">
+                        <button class="input-button">
+                            <i class="fas fa-face-smile"></i>
+                        </button>
+                        <button class="input-button">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <button class="send-button" id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

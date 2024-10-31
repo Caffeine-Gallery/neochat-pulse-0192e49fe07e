@@ -1,0 +1,12 @@
+type Message = 
+ record {
+   content: text;
+   sender: text;
+   timestamp: int;
+ };
+service : {
+  createChannel: (text) -> ();
+  getChannels: () -> (vec text) query;
+  getMessages: (text) -> (vec Message) query;
+  sendMessage: (text, text, text) -> ();
+}
